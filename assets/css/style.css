@@ -1,0 +1,143 @@
+:root {
+  --primary: #F2661B;
+  --primary-dark: #D9550F;
+  --green: #16A34A;
+  --green-dark: #128038;
+  --bg: #F5F6F8;
+  --card: #ffffff;
+  --text: #14161A;
+  --muted: #6b7280;
+  --danger: #DC2626;
+  --success: #16A34A;
+  --border: #E5E7EB;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.screen {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 20px;
+  padding: 28px 22px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+  position: relative;
+}
+
+h1 { font-size: 1.4rem; margin: 0 0 4px; letter-spacing: -0.02em; }
+h2 { font-size: 1.25rem; margin: 0 0 8px; letter-spacing: -0.01em; }
+p.subtitle { color: var(--muted); margin: 0 0 22px; font-size: .92rem; }
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 15px 18px;
+  border: none;
+  border-radius: 999px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background .15s ease, opacity .15s ease;
+}
+.btn:hover { background: var(--primary-dark); }
+.btn.secondary { background: #fff; color: var(--text); border: 1px solid var(--border); font-weight: 600; }
+.btn.green { background: linear-gradient(135deg, #22C55E, var(--green-dark)); }
+.btn.green:hover { opacity: .92; }
+
+.back-pill {
+  display: inline-block;
+  background: #F3F4F6;
+  border: none;
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: .85rem;
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: none;
+  margin-bottom: 4px;
+}
+
+.field { margin-bottom: 16px; }
+.field label {
+  display: block;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 6px;
+}
+.field .hint { text-transform: none; letter-spacing: 0; font-weight: 500; color: var(--muted); }
+.field input, .field select {
+  width: 100%;
+  padding: 13px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #F9FAFB;
+  font-size: .95rem;
+  color: var(--text);
+}
+.field input::placeholder { color: #9CA3AF; }
+
+.upload-box {
+  border: 1.5px dashed #D1D5DB;
+  border-radius: 12px;
+  background: #F9FAFB;
+  padding: 22px 14px;
+  text-align: center;
+  color: var(--muted);
+  font-size: .88rem;
+  cursor: pointer;
+  transition: border-color .15s ease, background .15s ease;
+}
+.upload-box:hover, .upload-box.dragover { border-color: var(--primary); background: #FFF7ED; }
+.upload-box input[type=file] { display: none; }
+.upload-box .filename { color: var(--text); font-weight: 600; margin-top: 4px; }
+
+.bank-row { display: flex; justify-content: space-between; align-items: center; padding: 14px 0; border-bottom: 1px solid var(--border); }
+.bank-row:last-child { border-bottom: none; }
+.bank-label { color: var(--primary); font-size: .72rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; margin-bottom: 3px; }
+.bank-value { font-weight: 700; font-size: 1rem; }
+.copy-btn { background: #14161A; color: #fff; border: none; border-radius: 999px; padding: 8px 14px; font-size: .78rem; font-weight: 700; cursor: pointer; }
+
+.alert { padding: 12px 14px; border-radius: 10px; margin-bottom: 16px; font-size: .88rem; }
+.alert.error { background: #fef2f2; color: var(--danger); border: 1px solid #fecaca; }
+.alert.success { background: #f0fdf4; color: var(--success); border: 1px solid #bbf7d0; }
+
+.site-footer {
+  margin-top: 22px;
+  text-align: center;
+  color: var(--muted);
+  font-size: .78rem;
+}
+.site-footer .credit-name { font-weight: 700; color: var(--text); }
+.site-footer .social-links { margin-top: 6px; display: flex; gap: 14px; justify-content: center; }
+.site-footer .social-links a { color: var(--muted); text-decoration: none; font-weight: 600; font-size: .78rem; }
+.site-footer .social-links a:hover { color: var(--primary); }
+
+
+
+
+
+
+
